@@ -60,5 +60,5 @@ The notebooks progress from basic data visualization concepts to creating, custo
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/infinityrohit07/learning-matplotlib.git
 cd learning-matplotlib
