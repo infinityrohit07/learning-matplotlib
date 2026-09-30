@@ -1,65 +1,64 @@
 # Learning Matplotlib
 
-A small, notebook-based learning folder for practicing data visualization in Python. The notebooks progress from general visualization notes to Matplotlib concepts, line plots, and bar charts.
+A notebook-based learning of **data visualization with Python**, primarily using **Matplotlib and Pandas**.
+
+The notebooks progress from basic data visualization concepts to creating, customizing, saving, and analyzing different types of plots.
 
 ## What's in this folder
 
-- `01_data-visualisation-notes.ipynb` — introductory data visualization notes.
-- `02_matplotlib-notes.ipynb` — notes and examples for Matplotlib.
-- `03_lineplot.ipynb` — line plot examples and practice.
-- `04_barcharts.ipynb` — bar chart examples and practice.
-- `requirement.txt` — the Python packages needed to run the notebooks: NumPy, pandas, Matplotlib, and Jupyter.
-- `.gitignore` — excludes the local virtual environment and Python/Jupyter cache files from Git.
+### Introduction
+
+- `01_data-visualisation-notes.ipynb` — Introduction to data visualization, data types, and common visualization types.
+- `02_matplotlib-notes.ipynb` — Matplotlib introduction, basic plotting concepts, and plot structure.
+
+### Matplotlib Plot Types
+
+- `03_lineplot.ipynb` — Line plots, markers, labels, legends, grids, and customization.
+- `04_barcharts.ipynb` — Bar charts, grouped bars, stacked bars, sorting, highlighting, reference lines, and error bars.
+- `05_histograms.ipynb` — Histograms, bins, density, ranges, orientation, and comparing distributions.
+- `06_scatterplots.ipynb` — Scatter plots, markers, colors, data-driven colors, groups, annotations, and trend lines.
+- `07_piecharts.ipynb` — Pie charts, labels, percentages, colors, explode, shadows, borders, and legends.
+- `08_boxplots.ipynb` — Box plots, quartiles, median, IQR, outliers, multiple box plots, and customization.
+- `09_areaplots.ipynb` — Area plots using `fill_between()` and `stackplot()`.
+- `10_subplots.ipynb` — Creating multiple plots in one figure using subplots, figure sizing, spacing, shared axes, and figure titles.
+- `11_generalcustomisation.ipynb` — General plot customization such as axis limits, ticks, labels, legends, and other display options.
+- `12_savefig.ipynb` — Saving Matplotlib figures using different formats, DPI, and `bbox_inches`.
+
+### Pandas + Matplotlib
+
+- `13_matplotlib_panda.ipynb` — Using Pandas DataFrames with Matplotlib, including `df.plot()`, line plots, bar charts, histograms, scatter plots, multiple columns, customization, and `groupby()` with plotting.
+
+## Topics Covered
+
+- Data visualization fundamentals
+- Matplotlib basics
+- Line plots
+- Bar charts
+- Histograms
+- Scatter plots
+- Pie charts
+- Box plots
+- Area plots
+- Subplots
+- Plot customization
+- Axis limits and ticks
+- Legends and labels
+- Saving figures
+- Pandas + Matplotlib
+- Grouping and visualizing DataFrame data
 
 ## What you need
 
-1. Install Python 3.11 or newer from [python.org](https://www.python.org/downloads/). On Windows, enable **Add Python to PATH** in the installer.
-2. Open a terminal (PowerShell on Windows, Terminal on macOS/Linux) and change directory to this folder.
-3. Create a virtual environment and activate it:
+- Python 3.11 or newer
+- NumPy
+- Pandas
+- Matplotlib
+- Jupyter
 
-   **Windows PowerShell**
-   ```powershell
-   python -m venv venv
-   .\venv\Scripts\Activate.ps1
-   ```
+## Setup
 
-   If PowerShell blocks activation scripts, you can activate from Command Prompt instead with `venv\Scripts\activate.bat`, or use the current PowerShell session-only option `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` and run the activation command again.
-
-   **macOS / Linux**
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-4. Install the packages listed in the provided file (its name is singular: `requirement.txt`):
-
-   ```bash
-   python -m pip install --upgrade pip
-   python -m pip install -r requirement.txt
-   ```
-
-5. Start Jupyter Notebook:
-
-   ```bash
-   jupyter notebook
-   ```
-
-   Your browser will open the Jupyter file list. Choose a notebook to begin. Run cells from top to bottom with **Shift+Enter**. When finished, stop the notebook server with **Ctrl+C** in the terminal and confirm if prompted.
-
-## Using the virtual environment
-
-A virtual environment is a separate Python setup for this folder. Packages installed while it is active stay with this project instead of changing your system-wide Python installation or interfering with packages used by another project. This also makes it easier to reproduce the setup: create a fresh environment and install the packages from `requirement.txt`.
-
-Activate the environment whenever you work on these notebooks. The terminal prompt usually shows `(.venv)` when it is active. To leave it, run:
+### 1. Clone the repository
 
 ```bash
-deactivate
-```
-
-The `venv/` directory is a local environment created on one machine. Virtual environments are generally not portable between machines, so create your own by following the steps above rather than relying on a copied environment folder. It is ignored by Git.
-
-## Troubleshooting
-
-- If `python` or `py` is not recognized, install Python and reopen the terminal. On macOS/Linux, use `python3` where needed.
-- If Jupyter cannot find a package, make sure the virtual environment is active and rerun `python -m pip install -r requirement.txt`.
-- If notebook cells use the wrong Python, select the environment's Python kernel in Jupyter. You can register it with `python -m ipykernel install --user --name learning-matplotlib --display-name "Python (learning-matplotlib)"` while the environment is active.
+git clone <your-repository-url>
+cd learning-matplotlib
